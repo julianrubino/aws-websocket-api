@@ -3,7 +3,7 @@ locals {
     {
       default_lambda_arn     = aws_lambda_function.default_route.arn
       connect_lambda_arn     = aws_lambda_function.connect_route.arn
-      disconnect_lambda_arn     = aws_lambda_function.disconnect_route.arn
+      disconnect_lambda_arn  = aws_lambda_function.disconnect_route.arn
       random_word_lambda_arn = aws_lambda_function.random_word_route.arn
       wss_api_arn            = aws_apigatewayv2_api.websocket_api.arn
     }

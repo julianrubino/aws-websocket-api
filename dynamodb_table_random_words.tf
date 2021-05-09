@@ -1,8 +1,8 @@
 ### AWS DynamoDB table RandomWords
 resource "aws_dynamodb_table" "random_words" {
-  name           = "RandomWords"
-  billing_mode   = "PAY_PER_REQUEST"
-  hash_key       = "word"
+  name         = "RandomWords"
+  billing_mode = "PAY_PER_REQUEST"
+  hash_key     = "word"
 
   attribute {
     name = "word"

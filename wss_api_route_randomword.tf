@@ -1,9 +1,9 @@
 ### randomword route
 resource "aws_apigatewayv2_route" "websocket_api_random_word_route" {
-  api_id    = aws_apigatewayv2_api.websocket_api.id
-  route_key = "randomword"
+  api_id                              = aws_apigatewayv2_api.websocket_api.id
+  route_key                           = "randomword"
   route_response_selection_expression = "$default"
-  target    = "integrations/${aws_apigatewayv2_integration.websocket_api_random_word_integration.id}"
+  target                              = "integrations/${aws_apigatewayv2_integration.websocket_api_random_word_integration.id}"
 }
 
 ### randomword route response
@@ -16,10 +16,10 @@ resource "aws_apigatewayv2_route_response" "websocket_api_random_word_route_resp
 ### randomword route integration
 resource "aws_apigatewayv2_integration" "websocket_api_random_word_integration" {
   api_id                    = aws_apigatewayv2_api.websocket_api.id
+  integration_uri           = aws_lambda_function.random_word_route.invoke_arn
   integration_type          = "AWS_PROXY"
   content_handling_strategy = "CONVERT_TO_TEXT"
   description               = "Lambda API integration for random_word function"
-  integration_uri           = aws_lambda_function.random_word_route.invoke_arn
 }
 
 ### randomword route integration response
