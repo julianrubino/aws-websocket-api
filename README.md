@@ -2,7 +2,7 @@
 
 This Terraform code creates a WebSocket API in AWS API Gateway
 
-![alt text](https://ibb.co/R7CbqK8 "WSS API Workflow")
+![alt text](https://i.ibb.co/V3v9sG6/amwell-ws-infra.png "WSS API Workflow")
 
 ### Simple workflow
 
