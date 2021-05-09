@@ -1,13 +1,24 @@
 ## WebSocket API Gateway + Lambda + DynamoDB
 
-This Terraform code creates a WebSocket API in AWS API Gateway
-
 ![alt text](https://i.ibb.co/V3v9sG6/amwell-ws-infra.png "WSS API Workflow")
+
+This Terraform code creates a WebSocket API in AWS API Gateway.
 
 ![alt text](https://s3.gifyu.com/images/ezgif.com-gif-makerec37cba4736ba86e.gif "WSS API Workflow")
 
-### Simple workflow
+### Client
+1. You can use the client of your choice. Consider using wscat.
 
+### Server-side
+
+1. Configure an AWS API gateway endpoint which maintains a WebSocket to
+the client
+2. A Lambda connected to the API gateway endpoint which responds to
+requests sent to the API gateway
+3. A DynamoDB collection which contains a set of random words
+        `[{ “word”: “car“}, {“word“: “truck“}, {“word“: “banana“}]`
+
+### Simple workflow
 1. Install wscat (npm install -g wscat).
 2. Establish a WebSocket connection to the WebSocket API.
     `wscat -c wss_api_connection_url`
