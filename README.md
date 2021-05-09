@@ -4,6 +4,8 @@ This Terraform code creates a WebSocket API in AWS API Gateway
 
 ![alt text](https://i.ibb.co/V3v9sG6/amwell-ws-infra.png "WSS API Workflow")
 
+![alt text](https://s3.gifyu.com/images/ezgif.com-gif-makerec37cba4736ba86e.gif "WSS API Workflow")
+
 ### Simple workflow
 
 1. Install wscat (npm install -g wscat).
